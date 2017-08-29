@@ -1,6 +1,6 @@
 var mongoose = require('mongoose');
 
-mongoose.promise = global.promise; //konfiguracja jednorazowa
-mongoose.connect('mongodb://localhost:27017/TodoApp');
+mongoose.Promise = global.Promise; //konfiguracja jednorazowa
+mongoose.connect('mongodb://localhost:27017/TodoApp',{useMongoClient: true});
 
 module.exports = {mongoose};
