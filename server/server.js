@@ -22,18 +22,9 @@ app.post('/todos',(req,res) => {
 
 });
 
-app.post('/user', (req,res) => {
-	var user = new User({
-		email: req.body.email
-	});
-
-	user.save().then((doc) => {
-		res.send(doc);
-	}, (e) => {
-		res.send(e);
-	});
-});
 
 app.listen(3000, () => {
 	console.log('Started on port 3000');
 });
+
+module.exports = {app};
